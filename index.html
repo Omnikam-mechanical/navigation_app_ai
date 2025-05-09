@@ -105,7 +105,8 @@
             window.speechSynthesis.speak(speech);
         }
 
-    if ("serviceWorker" in navigator) {
+    window.onload = initCOCOSSD;
+        if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
             navigator.serviceWorker.register("./service-worker.js").then(() => {
                 console.log("Service Worker Registered");
@@ -113,8 +114,7 @@
         });
     }
 </script>
-
-        window.onload = initCOCOSSD;
+        
         
         </script>
 </body>
